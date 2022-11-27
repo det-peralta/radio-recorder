@@ -1,0 +1,8 @@
+version: '3'
+services:
+  radio_recorder:
+    container_name: radio-recorder
+    build: .
+    restart: always
+    volumes:
+      - /volume1/Futebol/Vilar/2022_2023/Imprensa/radios:/output
