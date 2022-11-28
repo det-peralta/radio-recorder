@@ -9,3 +9,6 @@
 0 12 * * SAT ffmpeg -hide_banner -loglevel error -i "https://centova.radio.com.pt/proxy/491?mp=/stream" -t 02:30:00 -acodec pcm_s16le -ac 1 -ar 16000 "/output/BRIGANTINA-SAB-$(date +%F_%H-%M-%S).wav"
 50 20 * * MON ffmpeg -hide_banner -loglevel error -i "https://centova.radio.com.pt/proxy/491?mp=/stream" -t 02:30:00 -acodec pcm_s16le -ac 1 -ar 16000 "/output/BRIGANTINA-SEG-$(date +%F_%H-%M-%S).wav"
 40 14 * * SUN ffmpeg -hide_banner -loglevel error -i "https://centova.radio.com.pt/proxy/491?mp=/stream" -t 02:30:00 -acodec pcm_s16le -ac 1 -ar 16000 "/output/BRIGANTINA-DOM-$(date +%F_%H-%M-%S).wav"
+
+33 11  * * MON ffmpeg -hide_banner -loglevel error -i "http://78.129.185.81:25422/stream" -t 00:01:00 -acodec pcm_s16le -ac 1 -ar 16000 "/output/TESTE-RCA-$(date +%F_%H-%M-%S).wav"
+33 11  * * MON ffmpeg -hide_banner -loglevel error -i "https://centova.radio.com.pt/proxy/566?mp=/stream" -t 00:01:00 -acodec pcm_s16le -ac 1 -ar 16000 "/output/TESTE-RM-$(date +%F_%H-%M-%S).wav"
