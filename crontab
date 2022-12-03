@@ -1,7 +1,7 @@
-50 07 * * * find /output/ -type d -empty -print -delete
-00 08 * * * mkdir /output/records-"$(date +%F)"
+50 7 * * * find /output/ -type d -empty -print -delete
+00 8 * * * mkdir /output/records-"$(date +%F)"
 
-30 09 * * SAT ffmpeg -hide_banner -loglevel error -i "http://78.129.185.81:25422/stream" -t 01:30:00 -acodec libmp3lame "/output/records-$(date +%F)/RCA-SAB-$(date +%H-%M-%S).mp3"
+30 10 * * SAT ffmpeg -hide_banner -loglevel error -i "http://78.129.185.81:25422/stream" -t 01:30:00 -acodec libmp3lame "/output/records-$(date +%F)/RCA-SAB-$(date +%H-%M-%S).mp3"
 40 14 * * SUN ffmpeg -hide_banner -loglevel error -i "http://78.129.185.81:25422/stream" -t 02:30:00 -acodec libmp3lame "/output/records-$(date +%F)/RCA-DOM-$(date +%H-%M-%S).mp3"
 
 00 11 * * MON ffmpeg -hide_banner -loglevel error -i "https://centova.radio.com.pt/proxy/566?mp=/stream" -t 01:30:00 -acodec libmp3lame "/output/records-$(date +%F)/RM-SEG-$(date +%H-%M-%S).mp3"
